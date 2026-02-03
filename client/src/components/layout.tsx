@@ -104,6 +104,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <li><a href="/#capabilities" className="hover:text-white transition-colors">How We Work</a></li>
                 <li><a href="/#contact" className="hover:text-white transition-colors">Contact Support</a></li>
                 <li><Link href="/solvents"><a className="hover:text-white transition-colors">Solvents Catalog</a></Link></li>
+                <li><Link href="/dyes"><a className="hover:text-white transition-colors">Dyes Catalog</a></Link></li>
               </ul>
             </div>
 

@@ -10,36 +10,36 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
-export default function Solvents() {
+export default function Dyes() {
   const { toast } = useToast();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState<"Inquiry" | "Order">("Inquiry");
   const [selectedProduct, setSelectedProduct] = useState("");
 
-  const solvents = [
+  const dyes = [
     {
-      name: "DM PET Smell Drum",
-      desc: "Used in Agro granular Products, Such as chloro 10% GR. Purely Solvent Base.",
-      image: drumImg,
-      tags: ["Agro", "Granular", "Solvent Base"]
-    },
-    {
-      name: "Acetone",
-      desc: "High purity industrial solvent widely used in laboratories and manufacturing.",
+      name: "Reactive Dyes",
+      desc: "High-quality reactive dyes for textile applications with excellent color fastness.",
       image: labImg,
-      tags: ["High Purity", "Lab Grade"]
+      tags: ["Textile", "Color Fastness", "Reactive"]
     },
     {
-      name: "Methanol",
-      desc: "Industrial grade methanol for various chemical applications.",
+      name: "Acid Dyes",
+      desc: "Specialized acid dyes for wool, silk, and nylon fibers.",
       image: labImg,
-      tags: ["Industrial Grade", "Alcohol"]
+      tags: ["Wool", "Silk", "Nylon"]
     },
     {
-      name: "Toluene",
-      desc: "Aromatic hydrocarbon solvent used in paint thinners and chemical synthesis.",
+      name: "Disperse Dyes",
+      desc: "Used for dyeing polyester and acetate fibers with vibrant results.",
       image: drumImg,
-      tags: ["Aromatic", "Hydrocarbon"]
+      tags: ["Polyester", "Acetate", "Vibrant"]
+    },
+    {
+      name: "Vat Dyes",
+      desc: "Exceptional color fastness properties for cotton and cellulose fibers.",
+      image: drumImg,
+      tags: ["Cotton", "Cellulose", "Durable"]
     }
   ];
 
@@ -68,9 +68,9 @@ export default function Solvents() {
               <ArrowLeft className="h-4 w-4 mr-2" /> Back to Home
             </a>
           </Link>
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Solvents</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">Dyes & Intermediates</h1>
           <p className="text-xl text-primary-foreground/80 max-w-2xl">
-            High-purity industrial solvents for agrochemical, pharmaceutical, and manufacturing applications.
+            High-performance dyes for textile, manufacturing, and specialty industrial applications.
           </p>
         </div>
       </div>
@@ -78,7 +78,7 @@ export default function Solvents() {
       {/* Product Grid */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {solvents.map((product, index) => (
+          {dyes.map((product, index) => (
             <div key={index} className="bg-white rounded-lg border border-slate-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
               <div className="aspect-[4/3] bg-slate-100 relative overflow-hidden">
                 <img 
@@ -129,10 +129,9 @@ export default function Solvents() {
         {/* Custom Inquiry Box */}
         <div className="mt-16 bg-white p-8 rounded-lg border border-slate-200 shadow-sm text-center">
           <Beaker className="h-10 w-10 text-accent mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-primary mb-2">Looking for a specific solvent?</h3>
+          <h3 className="text-2xl font-bold text-primary mb-2">Looking for a specific dye?</h3>
           <p className="text-muted-foreground max-w-xl mx-auto mb-6">
-            We source custom chemical requirements through our verified supplier network. 
-            If you don't see what you need, let us know.
+            We trade a wide variety of chemical intermediates and dyes. If you have a specific requirement, contact us.
           </p>
           <a href="/#contact" className="inline-block bg-white border-2 border-primary text-primary px-8 py-2 rounded-sm font-bold hover:bg-primary hover:text-white transition-colors">
             Contact Sourcing Team
@@ -169,7 +168,7 @@ export default function Solvents() {
             {modalType === "Order" && (
               <div className="grid gap-2">
                 <Label htmlFor="quantity">Quantity Required</Label>
-                <Input id="quantity" placeholder="e.g., 500 Liters / 10 Drums" required />
+                <Input id="quantity" placeholder="e.g., 25kg Bags / Bulk" required />
               </div>
             )}
             <div className="grid gap-2">
