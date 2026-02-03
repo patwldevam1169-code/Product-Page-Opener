@@ -7,10 +7,12 @@ import Home from "@/pages/home";
 import Solvents from "@/pages/solvents";
 import Dyes from "@/pages/dyes";
 import { Layout } from "@/components/layout";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 function Router() {
   return (
     <Layout>
+      <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/solvents" component={Solvents} />
